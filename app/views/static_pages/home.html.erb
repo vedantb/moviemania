@@ -1,2 +1,52 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="center hero-unit" style="background-image: url(http://static.myopera.com/community/graphics/speeddials/Opera-Background-Space-Harmonica.jpg)">
+  <h1 style="color: white;">Welcome to MovieTime</h1>
+  <h2>Write a review for the movies you like and dislike!!</h2>
+
+  <%= link_to "Sign Up!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+<div>
+  <ul class="thumbnails">
+
+    <li class="span4">
+      <div class="thumbnails">
+        <a href="#" class="thumbnail">
+          <%= link_to image_tag("Avengers.jpg", height:270, alt: "Avengers"), '#' %>
+        </a>
+        <h3>Avengers</h3>
+        <p>Thumbnail caption</p>
+        <button class="btn btn-medium">Read More</button>
+      </div>
+    </li>
+    <li class="span4">
+      <div class="thumbnails">
+        <a href="#" class="thumbnail">
+          <%= link_to image_tag("perks of being a wallflower.jpg", height: 270, width:300, alt: "Perks of Being a Wallflower"), '#' %>
+        </a>
+        <h3>The Perks of being a Wallflower</h3>
+        <p>Thumbnail caption</p>
+        <button class="btn btn-medium">Read More</button>
+      </div>
+    </li>
+    <li class="span4">
+      <div class="thumbnails">
+        <a href="#" class="thumbnail">
+          <%= link_to image_tag("The bourne legacy.jpg", width: 300, height:270, alt:"Bourne Legacy") %>
+        </a>
+        <h3>The Bourne Legacy</h3>
+        <p>Thumbnail caption</p>
+        <button class="btn btn-medium">Read More</button>
+      </div>
+    </li>
+    <li class="span4">
+      <div class="thumbnails">
+        <a href="#" class="thumbnail">
+          <%= link_to image_tag("The-Dark-Knight-Rises-teaser.jpg", width: 280, height:270, alt: "") %>
+        </a>
+        <h3>The Dark Knight Rises</h3>
+        <p>Thumbnail caption</p>
+        <button class="btn btn-medium">Read More</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
