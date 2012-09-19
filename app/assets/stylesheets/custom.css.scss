@@ -1,11 +1,16 @@
 @import "bootstrap";
 
+@mixin box-sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html{
   overflow-y: scroll
 }
 
 body{
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 section{
@@ -30,6 +35,7 @@ textarea {
   margin-right: 0.5px;
 }
 
+
 .thumbnails h3{
   text-align: center;
 }
@@ -53,6 +59,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #fff;
 }
 
 h1 {
@@ -74,6 +81,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #fff;
 }
 
 
@@ -85,11 +93,11 @@ footer {
 }
 
 footer a {
-  color: #555;
+  color: #fff;
 }
 
 footer a:hover {
-  color: #222;
+  color: #fff;
 }
 
 footer small {
@@ -109,4 +117,71 @@ footer ul li {
 .welcome
   {
   color: #ffffff;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+body{
+  color: #fff;
+  background: url('background.jpg');
+  text-align: center;
+}
+
+aside{
+  margin-top: 20px;
+  section{
+    padding: 10px 0;
+    border-top:1px solid #696969;
+    &:first-child{
+      border: 0;
+      padding-top: 0;
+
+    }
+    span{
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1{
+      font-size: 2em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+
+    }
+  }
+}
+.gravatar{
+  float: left;
+  margin-right: 10px;
+}
+
+input, textarea, select, .uneditable-input {
+  color: #fff;
+  border: 1px solid #fff;
+  width: 100%;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+
+#error_explanation {
+  color: #f00;
+  ul{
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors{
+  @extend .control-group;
+  @extend .error;
 }
